@@ -5,9 +5,16 @@ This is my SSP project for 2016 study deep learning under supervisor of Dr ***Ji
 
 The topic is to study the deep neural network (CNN, RNN etc) and use Tensorflow https://www.tensorflow.org/
 
+I have done 4 different task
+
+* CNN image classfication
+* DNN text classfication
+* RNN prediction
+* SOM clustering
+
 ##Library Requirement
 
-* IPython 3 
+* IPython 3 & 2
 * Tensorflow https://www.tensorflow.org/
 * Scikit Learn 
 * Scipy (Numpy, Pandas, Matplotlib)
