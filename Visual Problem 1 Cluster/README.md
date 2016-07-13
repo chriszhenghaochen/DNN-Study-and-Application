@@ -8,4 +8,7 @@ This is the problem that using SOM to detect crime pattern
 * Scikit Learn 
 * Scipy (Numpy, Pandas, Matplotlib)
 
+## Acknowledgement
+
+SOM library is modified from https://github.com/sevamoo/SOMPY, thanks to Dr Vahid Moosavi
 
