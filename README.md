@@ -13,9 +13,9 @@ I have done 4 different task
 * SOM clustering
 
 ##DATA
-UCI handwritting http://archive.ics.uci.edu/ml/datasets/Letter+Recognition
-MNIST handwritting http://yann.lecun.com/exdb/mnist/
-VAST Chanllenge 2015 https://www.google.com.au/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=VAST+challenge+2015
+* UCI handwritting http://archive.ics.uci.edu/ml/datasets/Letter+Recognition
+* MNIST handwritting http://yann.lecun.com/exdb/mnist/
+* VAST Chanllenge 2015 https://www.google.com.au/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=VAST+challenge+2015
 
 ##Library Requirement
 
