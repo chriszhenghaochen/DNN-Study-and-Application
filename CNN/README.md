@@ -1,6 +1,9 @@
-# CNN
+#CNN
 
 This is the CNN image classifcation using tensorflow 
+
+#Data
+http://yann.lecun.com/exdb/mnist/
 
 ##Library Requirement
 
