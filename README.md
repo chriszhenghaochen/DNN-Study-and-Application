@@ -17,6 +17,9 @@ I have done 4 different task
 * MNIST handwritting http://yann.lecun.com/exdb/mnist/
 * VAST Chanllenge 2015 https://www.google.com.au/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=VAST+challenge+2015
 
+##Document
+Report is included in the folder
+
 ##Library Requirement
 
 * IPython 3 & 2
