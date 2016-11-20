@@ -1,4 +1,4 @@
-# Deep-Neural-Network-Study
+# Deep-Neural-Network-Study-&Application
 
 ##Overview
 This is my SSP project for 2016 study deep learning under supervisor of 
