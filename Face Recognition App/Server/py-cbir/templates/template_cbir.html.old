@@ -1,0 +1,150 @@
+{% extends "template_base.html" %}
+
+{% block head %}
+  <title>{{ escape("sknowpy face search demo") }}</title>
+  <script>
+  </script>
+{% end %}
+
+{% block nav %}
+  <br>
+  <ul class="nav nav-pills">
+    <li><a href="/cbir">reset</a></li>
+  </ul>
+{% end %}
+
+{% block body %}
+  <h1 align="center">sknowpy demo</h1>
+  <div align="center">
+    <form action="/cbir" method="post" enctype="multipart/form-data">
+      <input type="file" class="span4" id="imppath" name="imgpath">
+      <button type="submit" class="btn btn-primary" id="upfile">Upload</button>
+    </form>
+  </div>
+  <br>
+  <div align="center" id="queryimg">
+    {% if imgpath %}
+    <img src="{{ imgpath }}" style="width:160px" class="img-polaroid">
+    {% end %}
+  </div>
+
+<div class="content">
+			<div class="grid">
+                               {% for path, name, dist, diststr, urldict in lists %}
+
+				<div class="grid__item" data-size="1280x857">
+					<a href="{{ path }}" class="img-wrap"><img src="{{ path }}" alt="{{name}}" />
+						<div class="description description--grid">
+							<h3> {{name}} </h3>
+						        <p> {{diststr}} </p>
+							<div class="details">
+								<ul>
+									<li><i>Facebook</i><span>{% for i, url in enumerate(urldict['fb']) %}
+                                                                                                    <a href="{{url}}">{{i}}</a>
+                                                                                                 {%end%}
+                                                                                                 </span></li>
+                                                                                              
+									<li><i>Twitter</i><span>{% for i, url in enumerate(urldict['tw']) %}
+                                                                                                    <a href="{{url}}">{{i}}</a>
+                                                                                                 {%end%}
+                                                                                                 </span></li>
+									<li><i>Linkedin</i><span>{% for i, url in enumerate(urldict['fb']) %}
+                                                                                                    <a href="{{url}}">{{i}}</a>
+                                                                                                 {%end%}
+                                                                                                 </span></li>
+									<li><i>imdb</i><span>{% for i, url in enumerate(urldict['fb']) %}
+                                                                                                    <a href="{{url}}">{{i}}</a>
+                                                                                                 {%end%}
+                                                                                                 </span></li>
+									<li><i>wiki</i><span>{% for i, url in enumerate(urldict['fb']) %}
+                                                                                                    <a href="{{url}}">{{i}}</a>
+                                                                                                 {%end%}
+                                                                                             </span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+				{% end %}
+			</div>
+			<!-- /grid -->
+			<div class="preview">
+				<button class="action action--close"><i class="fa fa-times"></i><span class="text-hidden">Close</span></button>
+				<div class="description description--preview"></div>
+			</div>
+			<!-- /preview -->
+		</div>
+		<!-- /content -->
+		<!-- Related demos -->
+		<section class="content content--related">
+			<p> More to be done soon. </p>
+		</section>
+	</div>
+	<!-- /container -->
+	<script src="{{ static_url("js/imagesloaded.pkgd.min.js") }}"></script>
+	<script src="{{ static_url("js/masonry.pkgd.min.js") }}"></script>
+	<script src="{{ static_url("js/classie.js") }}"></script>
+	<script src="{{ static_url("js/main.js") }}"></script>
+	<script>
+		(function() {
+			var support = { transitions: Modernizr.csstransitions },
+				// transition end event name
+				transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
+				transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+				onEndTransition = function( el, callback ) {
+					var onEndCallbackFn = function( ev ) {
+						if( support.transitions ) {
+							if( ev.target != this ) return;
+							this.removeEventListener( transEndEventName, onEndCallbackFn );
+						}
+						if( callback && typeof callback === 'function' ) { callback.call(this); }
+					};
+					if( support.transitions ) {
+						el.addEventListener( transEndEventName, onEndCallbackFn );
+					}
+					else {
+						onEndCallbackFn();
+					}
+				};
+
+			new GridFx(document.querySelector('.grid'), {
+				imgPosition : {
+					x : -0.5,
+					y : 1
+				},
+				onOpenItem : function(instance, item) {
+					instance.items.forEach(function(el) {
+						if(item != el) {
+							var delay = Math.floor(Math.random() * 50);
+							el.style.WebkitTransition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), -webkit-transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
+							el.style.transition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
+							el.style.WebkitTransform = 'scale3d(0.1,0.1,1)';
+							el.style.transform = 'scale3d(0.1,0.1,1)';
+							el.style.opacity = 0;
+						}
+					});
+				},
+				onCloseItem : function(instance, item) {
+					instance.items.forEach(function(el) {
+						if(item != el) {
+							el.style.WebkitTransition = 'opacity .4s, -webkit-transform .4s';
+							el.style.transition = 'opacity .4s, transform .4s';
+							el.style.WebkitTransform = 'scale3d(1,1,1)';
+							el.style.transform = 'scale3d(1,1,1)';
+							el.style.opacity = 1;
+
+							onEndTransition(el, function() {
+								el.style.transition = 'none';
+								el.style.WebkitTransform = 'none';
+							});
+						}
+					});
+				}
+			});
+		})();
+	</script>
+{% end %}
+
+{% block bottom %}
+{% end %}
+

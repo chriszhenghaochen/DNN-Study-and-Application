@@ -1,30 +1,22 @@
 # Deep-Neural-Network-Study
 
 ##Overview
-This is my SSP project for 2016 study deep learning under supervisor of Dr ***Jianlong Zhou*** (CSIRO DATA61) Email: Jianlong.zhou@data61.csiro.com and Dr ***Xiuying Wang*** (USYD) Email: xiu.wang@sydney.edu.au
+This is my SSP project for 2016 study deep learning under supervisor of 
 
-The topic is to study the deep neural network (CNN, RNN etc) and use Tensorflow https://www.tensorflow.org/
+Dr ***Jianlong Zhou*** (CSIRO DATA61) Email: Jianlong.zhou@data61.csiro.com
 
-I have done 4 different task
+Dr ***Xiuying Wang*** (USYD) Email: xiu.wang@sydney.edu.au
 
-* CNN image classfication
-* DNN text classfication
-* RNN prediction
-* SOM clustering
 
-##DATA
-* UCI handwritting http://archive.ics.uci.edu/ml/datasets/Letter+Recognition
-* MNIST handwritting http://yann.lecun.com/exdb/mnist/
-* VAST Chanllenge 2015 https://www.google.com.au/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=VAST+challenge+2015
+## Projects
 
-##Document
-Report is included in the folder
+* Study of Neural Net 
+* Face Recognition Task
 
-##Library Requirement
 
-* IPython 3 & 2
-* Tensorflow https://www.tensorflow.org/
-* Scikit Learn 
-* Scipy (Numpy, Pandas, Matplotlib)
+## Documents
+
+Documents are included in each sub-folder which illustrates the detal work, please have a look before you use it
+
 
 

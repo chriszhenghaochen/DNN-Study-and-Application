@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SKNOWPY face search demo</title>
+	<meta name="description" content="Effect inspiration for opening an image grid item." />
+	<meta name="keywords" content="image grid, effect, inspiration, css, javascript, animation, masonry" />
+	<meta name="author" content="SKNOWPY" />
+	<link rel="shortcut icon" href="{{static_url("favicon.ico")}}>
+	<link rel="stylesheet" type="text/css" href="{{static_url("css/normalize.css")}}" />
+	<link rel="stylesheet" type="text/css" href="{{static_url("fonts/font-awesome-4.3.0/css/font-awesome.min.css")}}" />
+	<link rel="stylesheet" type= "text/css" href="{{ static_url("css/demo.css")}}" />
+	<link rel="stylesheet" type="text/css" href="{{ static_url("css/style2.css")}}" />
+	<script src="{{static_url("js/modernizr-custom.js")}}"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	 <!-- <link rel="stylesheet" href="{{ static_url("js/bootstrap.min.css") }}" />-->
+    <link rel="alternate" href="/feed" type="application/atom+xml" title="{{ escape(handler.settings["sitename"]) }}"/>
+    <script src="{{ static_url("js/jquery.js") }}" >
+    </script>
+    {% block head %}{% end %}
+  </head>
+  <body class="demo-2">
+    <div id="body">
+      <div id="header">
+	      {% block nav %}{% end %}
+      </div>
+      <div id="content">
+	      {% block body %}{% end %}
+	    </div>
+    </div>
+    {% block bottom %}{% end %}
+  </body>
+</html>
