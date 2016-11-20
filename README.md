@@ -1,7 +1,7 @@
 # Deep-Neural-Network-Study-&-Application
 
 ##Overview
-This is my SSP project for 2016 study deep learning under supervisor of 
+This is my SSP project for 2016 under supervisor of 
 
 Dr ***Jianlong Zhou*** (CSIRO DATA61) Email: Jianlong.zhou@data61.csiro.com
 
